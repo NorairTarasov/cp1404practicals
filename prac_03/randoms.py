@@ -13,7 +13,6 @@ print(dir(random))
 print(random.randint(5, 20))  # line 1
 # line 1 gives results from 5 to 20 inclusive
 # smallest number 5
-#
 # largest number 20
 
 print(random.randrange(3, 10, 2))  # line 2
