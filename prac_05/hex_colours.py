@@ -1,29 +1,13 @@
-FILENAME = "hex_colours.txt"
+COLOURS = {"Fuzzy Wuzzy": "#87421f", "GO Green": "#00ab66", "Chocolate": "#d2691e",
+           "Bright Maroon": "#c32148", "Zaffre": "#0014a8", "Ultramarine Blue": "#4166f5",
+           "Upsdell Red": "#ae2029", "Van Dyke Brown": "#664228",
+           "Oxford Blue": "#002147", "Pacific Blue": "#1ca9c9",
+           "AntiqueWhite3": "#cdc0b0", "AntiqueWhite4": "#8b8378",
+           "Rust": "#b7410e", "SaddleBrown": "#8b4513",
+           "Beige": "#f5f5dc", "Bisque1": "#ffe4c4"}
 
-file = open(FILENAME, "r")
+name = input("Enter a colour name (write nothing to skip to hex-code): ")
+while name != "":
+    print(f"The code for \"{name}\" is {COLOURS.get(name)}")
+    name = input("Enter a colour name: ")
 
-hex_colours_list = []
-hex_names_list = []
-
-for i in file:
-    index = i.find("#")
-    hex_colours_list.append(i[index+1:].upper())
-    hex_names_list.append(i[0:index])
-
-print(hex_colours_list)
-print(hex_names_list)
-
-color_code = input("Enter color code: #").upper()
-
-while color_code != "":
-
-    for j in file:
-        name = j.find("#")
-        if color_code == hex_colours_list[name+1:]:
-            print(f"#{color_code}", "is", hex_names_list[0:name])
-
-    if color_code not in hex_colours_list:
-        print("Invalid short state")
-    color_code = input("Enter color code: #").upper()
-
-file.close()

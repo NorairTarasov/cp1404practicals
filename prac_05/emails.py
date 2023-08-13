@@ -1,22 +1,24 @@
 
 
 def main():
-    email_domain = {}
+    name_of_email = {}
     email = input("Email: ")
+    while email != "":
+        name = get_name(email)
+        yes_or_no = input(f"Is your name {name}? (Y/n) ").upper()
+        if (yes_or_no != "Y") and (yes_or_no != ""):
+            name = input("Name: ")
+        name_of_email[email] = name
+        email = input("Email: ")
+    for email, name in name_of_email.items():
+        print(f"{name} ({email})")
+
+
+def get_name(email):
     at = email.split("@")[0]
     name_pieces = at.split(".")
-    while email != "":
-        name = f" {name_pieces}"
-        yes_or_no = input(f"Is your name {name}? (Y/n) ").upper()
-        if yes_or_no != "":
-            if yes_or_no == "Y":
-                email = input("Email: ")
-                email_domain[email] = name
-            else:
-                name = input("Name: ")
-
-        for email, name in email_domain.items():
-            print(f"{name} ({email})")
+    name = " ".join(name_pieces).title()
+    return name
 
 
 main()
