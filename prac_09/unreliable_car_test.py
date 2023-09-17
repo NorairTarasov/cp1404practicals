@@ -1,11 +1,3 @@
-"""
-CP1404/CP5632 Practical - Suggested Solution
-UnreliableCar class tests
-
-The point to an UnreliableCar is that it randomly does not always drive.
-So, these tests run several times in order to see that randomness.
-We expect the good car (high reliability) to drive more often than the bad car.
-"""
 
 from prac_09.unreliable_car import UnreliableCar
 

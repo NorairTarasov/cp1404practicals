@@ -1,7 +1,3 @@
-"""
-CP1404/CP5632 Practical - Suggested Solution
-SilverServiceTaxi class tests
-"""
 
 from prac_09.silver_service_taxi import SilverServiceTaxi
 

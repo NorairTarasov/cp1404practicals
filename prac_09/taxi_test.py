@@ -1,7 +1,3 @@
-"""
-CP1404/CP5632 Practical - Suggested Solution
-Test taxi
-"""
 
 from prac_09.taxi import Taxi
 

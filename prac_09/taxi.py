@@ -1,7 +1,3 @@
-"""
-CP1404/CP5632 Practical
-Taxi class, derived from Car
-"""
 
 from prac_09.car import Car
 
